@@ -6,287 +6,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy • PASADA</title>
 
-<!-- Satoshi Font -->
-<link
-  href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap"
-  rel="stylesheet"
-/>
+    <!-- Satoshi Font -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-  /* =========================
+    <style>
+      /* =========================
      GLOBAL RESET
   ========================= */
-  * {
-    box-sizing: border-box;
-  }
+      * {
+        box-sizing: border-box;
+      }
 
-  body {
-    margin: 0;
-    min-height: 100svh;
-    font-family:
-      "Satoshi",
-      system-ui,
-      -apple-system,
-      sans-serif;
-    color: #09244b;
+      body {
+        margin: 0;
+        min-height: 100svh;
+        font-family:
+          "Satoshi",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #09244b;
 
-    background-image: url("https://duzlyguxxiotdnmfecju.supabase.co/storage/v1/object/public/PASADA/Assets/pasadabg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+        background-image: url("https://duzlyguxxiotdnmfecju.supabase.co/storage/v1/object/public/PASADA/Assets/pasadabg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-  /* =========================
+      /* =========================
      PAGE WRAPPER
   ========================= */
-  .policy-wrapper {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(20px, 4vw, 40px);
-  }
+      .policy-wrapper {
+        min-height: 0svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* center everything horizontally */
+        justify-content: center;
+        padding: clamp(0px, 4vw, 40px);
+        padding-top: 88px; /* make room for the fixed header */
+      }
 
-  /* =========================
+      /* =========================
      GLASS CARD
   ========================= */
-  .policy-glass {
-    width: 100%;
-    max-width: 720px;
+      .policy-glass {
+        width: 100%;
+        max-width: 720px;
 
-    background: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
 
-    border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
 
-    padding: clamp(22px, 4vw, 34px);
-    margin: 32px 16px;
+        padding: clamp(22px, 4vw, 34px);
+        margin: 32px 16px;
 
-    box-shadow:
-      0 16px 40px rgba(0, 0, 0, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+        box-shadow:
+          0 16px 40px rgba(0, 0, 0, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
-    animation: fadeUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
+        animation: fadeUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
 
-  @keyframes fadeUp {
-    from {
-      transform: translateY(12px) scale(0.98);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-  }
+      @keyframes fadeUp {
+        from {
+          transform: translateY(12px) scale(0.98);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+      }
 
-  /* =========================
+      /* =========================
      HEADER
   ========================= */
-  .policy-header {
-    text-align: center;
-    margin-bottom: 22px;
-  }
+      .policy-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
 
-  .policy-logo {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-    margin-bottom: 10px;
-  }
+        width: 100%;
 
-  .policy-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
+        background: #ffffff;
+        color: #09244b;
+        padding: 14px clamp(16px, 4vw, 32px);
+        border-radius: 0;
+        box-shadow: 0 10px 30px rgba(8, 20, 40, 0.08);
 
-  .policy-date {
-    margin-top: 6px;
-    font-size: 0.8rem;
-    color: #09244b;
-  }
+        text-align: center;
+      }
 
-  /* =========================
+      .policy-logo {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      .policy-header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .policy-date {
+        margin-top: 6px;
+        font-size: 0.8rem;
+        color: #09244b;
+      }
+
+      /* =========================
      CONTENT
   ========================= */
-  .policy-content {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+      .policy-content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
 
-  .policy-content p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #09244b;
-  }
+      .policy-content p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #09244b;
+      }
 
-  .policy-section {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+      .policy-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
 
-  .policy-section h2 {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
+      .policy-section h2 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
 
-  .policy-section ul {
-    margin: 0;
-    padding-left: 18px;
-    font-size: 0.9rem;
-    line-height: 1.55;
-    color: #09244b;
-  }
+      .policy-section ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        color: #09244b;
+      }
 
-  .policy-section li {
-    margin-bottom: 6px;
-  }
+      .policy-section li {
+        margin-bottom: 6px;
+      }
 
-  /* =========================
+      /* =========================
      FOOTER
   ========================= */
-  .policy-footer {
-    margin-top: 22px;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.65);
-    text-align: center;
-  }
+      .policy-footer {
+        margin-top: 22px;
+        font-size: 0.8rem;
+        color: #09244b;
+        text-align: center;
+      }
 
-  .policy-footer a {
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-  }
-</style>
-
+      .policy-footer a {
+        color: #09244b;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body>
     <section class="policy-wrapper">
-        <header style="color: white;" class="policy-header">
-          <!-- <img
-            src="assets/about/PASADA.png"
-            alt="PASADA Logo"
-            class="policy-logo"
-          /> -->
-          <h1>Privacy Policy</h1>
-          <div style="color: white;" class="policy-date">Last Updated: 02/02/2026</div>
-        </header>
+      <header class="policy-header">
+        <h1>Privacy Policy</h1>
+        <div class="policy-date">
+          Last Updated: 02/02/2026
+        </div>
+      </header>
       <article class="policy-glass">
-        
+        <div class="policy-content">
+          <p>
+            Pasada (“we”, “our”, “app”) respects your privacy. This policy
+            explains how we collect, use, and protect your information.
+          </p>
 
-    <div class="policy-content">
-      <p>
-        Pasada (“we”, “our”, “app”) respects your privacy. This policy
-        explains how we collect, use, and protect your information.
-      </p>
+          <section class="policy-section">
+            <h2>1. Information We Collect</h2>
+            <ul>
+              <li>
+                <strong>Account Information:</strong> Name, email, phone number,
+                only if you choose to register
+              </li>
+              <li>
+                <strong>Pickup Location:</strong> Used only when you manually
+                set your pickup point on the map
+              </li>
+              <li>
+                <strong>Usage Data:</strong> Map interactions and app usage to
+                improve app experience
+              </li>
+            </ul>
+          </section>
 
-      <section class="policy-section">
-        <h2>1. Information We Collect</h2>
-        <ul>
-          <li>
-            <strong>Account Information:</strong> Name, email, phone number,
-            only if you choose to register
-          </li>
-          <li>
-            <strong>Pickup Location:</strong> Used only when you manually
-            set your pickup point on the map
-          </li>
-          <li>
-            <strong>Usage Data:</strong> Map interactions and app usage to
-            improve app experience
-          </li>
-        </ul>
-      </section>
+          <section class="policy-section">
+            <h2>2. How We Use Your Information</h2>
+            <ul>
+              <li>To show nearby drivers and allow “Get Directions” to them</li>
+              <li>To process confirmed pickup requests initiated by users</li>
+              <li>To improve the app experience</li>
+              <li>For security and support</li>
+            </ul>
+          </section>
 
-      <section class="policy-section">
-        <h2>2. How We Use Your Information</h2>
-        <ul>
-          <li>To show nearby drivers and allow “Get Directions” to them</li>
-          <li>To process confirmed pickup requests initiated by users</li>
-          <li>To improve the app experience</li>
-          <li>For security and support</li>
-        </ul>
-      </section>
+          <section class="policy-section">
+            <h2>3. Sharing Your Information</h2>
+            <ul>
+              <li>
+                Confirmed pickup location is shared
+                <em>only with nearby drivers if initiated by the user</em>
+              </li>
+              <li>
+                Personal information such as name, email, or phone is
+                <em>not shared with drivers</em> outside the app
+              </li>
+            </ul>
+          </section>
 
-      <section class="policy-section">
-        <h2>3. Sharing Your Information</h2>
-        <ul>
-          <li>
-            Confirmed pickup location is shared <em>only with nearby drivers
-            if initiated by the user</em>
-          </li>
-          <li>
-            Personal information such as name, email, or phone is
-            <em>not shared with drivers</em> outside the app
-          </li>
-        </ul>
-      </section>
+          <section class="policy-section">
+            <h2>4. Location Usage</h2>
+            <ul>
+              <li>Users manually select their pickup location on the map</li>
+              <li>
+                The app
+                <em>does not request device GPS or location permission</em>
+              </li>
+              <li>
+                Location is only used for confirmed pickups and map directions
+              </li>
+            </ul>
+          </section>
 
-      <section class="policy-section">
-        <h2>4. Location Usage</h2>
-        <ul>
-          <li>Users manually select their pickup location on the map</li>
-          <li>
-            The app <em>does not request device GPS or location permission</em>
-          </li>
-          <li>
-            Location is only used for confirmed pickups and map directions
-          </li>
-        </ul>
-      </section>
+          <section class="policy-section">
+            <h2>5. Data Retention</h2>
+            <ul>
+              <li>
+                Pickup location and usage data are temporary and tied to
+                user-initiated sessions
+              </li>
+              <li>
+                Account information is retained only as long as the account
+                exists
+              </li>
+            </ul>
+          </section>
 
-      <section class="policy-section">
-        <h2>5. Data Retention</h2>
-        <ul>
-          <li>
-            Pickup location and usage data are temporary and tied to
-            user-initiated sessions
-          </li>
-          <li>
-            Account information is retained only as long as the account
-            exists
-          </li>
-        </ul>
-      </section>
+          <section class="policy-section">
+            <h2>6. Security</h2>
+            <p>We implement standard practices to protect user data.</p>
+          </section>
 
-      <section class="policy-section">
-        <h2>6. Security</h2>
-        <p>
-          We implement standard practices to protect user data.
-        </p>
-      </section>
+          <section class="policy-section">
+            <h2>7. Your Rights</h2>
+            <ul>
+              <li>
+                You can review, update, or delete your account information at
+                any time
+              </li>
+              <li>See the “Account Deletion” page for instructions</li>
+            </ul>
+          </section>
 
-      <section class="policy-section">
-        <h2>7. Your Rights</h2>
-        <ul>
-          <li>
-            You can review, update, or delete your account information at
-            any time
-          </li>
-          <li>See the “Account Deletion” page for instructions</li>
-        </ul>
-      </section>
+          <section class="policy-section">
+            <h2>8. Contact</h2>
+            <p>
+              Questions?
+              <a href="mailto:support@kapasada.com">support@kapasada.com</a>
+            </p>
+          </section>
+        </div>
 
-      <section class="policy-section">
-        <h2>8. Contact</h2>
-        <p>
-          Questions? <a href="mailto:support@kapasada.com">support@kapasada.com</a>
-        </p>
-      </section>
-    </div>
-
-    <footer class="policy-footer">© 2026 PASADA</footer>
-  </article>
-</section>
-
+        <footer class="policy-footer">© 2026 PASADA</footer>
+      </article>
+    </section>
   </body>
 </html>
