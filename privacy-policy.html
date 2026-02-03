@@ -42,6 +42,7 @@
   .policy-wrapper {
     min-height: 100svh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: clamp(20px, 4vw, 40px);
@@ -60,7 +61,7 @@
     border: 1px solid rgba(255, 255, 255, 0.28);
 
     padding: clamp(22px, 4vw, 34px);
-    margin: 48px 16px;
+    margin: 32px 16px;
 
     box-shadow:
       0 16px 40px rgba(0, 0, 0, 0.25),
@@ -170,16 +171,17 @@
 
   <body>
     <section class="policy-wrapper">
-      <article class="policy-glass">
-        <header class="policy-header">
+        <header style="color: white;" class="policy-header">
           <!-- <img
             src="assets/about/PASADA.png"
             alt="PASADA Logo"
             class="policy-logo"
           /> -->
           <h1>Privacy Policy</h1>
-          <div class="policy-date">Last Updated: 02/02/2026</div>
+          <div style="color: white;" class="policy-date">Last Updated: 02/02/2026</div>
         </header>
+      <article class="policy-glass">
+        
 
     <div class="policy-content">
       <p>
