@@ -1,225 +1,207 @@
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account Deletion • PASADA</title>
 
-<!-- Satoshi Font -->
-<link
-  href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap"
-  rel="stylesheet"
-/>
+    <!-- Satoshi Font -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-  /* =========================
-     GLOBAL RESET
-  ========================= */
-  * {
-    box-sizing: border-box;
-  }
+    <style>
+      /* =========================
+         GLOBAL RESET
+      ========================= */
+      * {
+        box-sizing: border-box;
+      }
 
-  body {
-    margin: 0;
-    min-height: 100svh;
-    font-family:
-      "Satoshi",
-      system-ui,
-      -apple-system,
-      sans-serif;
-    color: #ffffff;
+      body {
+        margin: 0;
+        min-height: 100svh;
+        font-family: "Satoshi", system-ui, -apple-system, sans-serif;
+        color: #09244b;
 
-    background-image: url("https://duzlyguxxiotdnmfecju.supabase.co/storage/v1/object/public/PASADA/Assets/pasadabg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+        background-image: url("https://duzlyguxxiotdnmfecju.supabase.co/storage/v1/object/public/PASADA/Assets/pasadabg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
-  /* =========================
-     PAGE WRAPPER
-  ========================= */
-  .delete-wrapper {
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(20px, 4vw, 40px);
-  }
+      /* =========================
+         PAGE WRAPPER
+      ========================= */
+      .delete-wrapper {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(24px, 4vw, 40px);
+        padding-top: 120px;
+      }
 
-  /* =========================
-     GLASS CARD
-  ========================= */
-  .delete-glass {
-    width: 100%;
-    max-width: 680px;
+      /* =========================
+         CARD
+      ========================= */
+      .delete-glass {
+        width: 100%;
+        max-width: 680px;
+        background: #ffffff;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        padding: clamp(22px, 4vw, 34px);
+        margin: 32px 16px;
 
-    background: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(22px) saturate(160%);
-    -webkit-backdrop-filter: blur(22px) saturate(160%);
+        box-shadow:
+          0 16px 40px rgba(0, 0, 0, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
-    border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.28);
+        animation: fadeUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
 
-    padding: clamp(22px, 4vw, 34px);
-    margin: 0 16px;
+      @keyframes fadeUp {
+        from {
+          transform: translateY(12px) scale(0.98);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+      }
 
-    box-shadow:
-      0 16px 40px rgba(0, 0, 0, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      /* =========================
+         HEADER (FIXED)
+      ========================= */
+      .delete-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        height: 120px;
+        width: 100%;
+        background: #ffffff;
+        padding: 30px clamp(16px, 4vw, 32px);
+        box-shadow: 0 10px 30px rgba(8, 20, 40, 0.08);
 
-    animation: fadeUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+      }
 
-  @keyframes fadeUp {
-    from {
-      transform: translateY(12px) scale(0.98);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-  }
+      .delete-header h1 {
+        margin: 0;
+        font-size: 1.45rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
 
-  /* =========================
-     HEADER
-  ========================= */
-  .delete-header {
-    text-align: center;
-    margin-bottom: 22px;
-  }
+      /* =========================
+         CONTENT
+      ========================= */
+      .delete-content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
 
-  .delete-logo {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-    margin-bottom: 10px;
-  }
+      .delete-content p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
 
-  .delete-header h1 {
-    margin: 0;
-    font-size: 1.45rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
+      .delete-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 18px;
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
 
-  /* =========================
-     CONTENT
-  ========================= */
-  .delete-content {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+      .delete-notes {
+        margin-top: 6px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: rgba(9, 36, 75, 0.04);
+        border: 1px solid rgba(9, 36, 75, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.55;
+      }
 
-  .delete-content p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-  }
+      .delete-notes ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
 
-  .delete-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 18px;
-    font-size: 0.9rem;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.85);
-  }
+      /* =========================
+         FOOTER
+      ========================= */
+      .delete-footer {
+        margin-top: 22px;
+        font-size: 0.8rem;
+        text-align: center;
+      }
 
-  .delete-notes {
-    margin-top: 6px;
-    padding: 14px 16px;
-    border-radius: 16px;
-
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-
-    font-size: 0.85rem;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.85);
-  }
-
-  .delete-notes ul {
-    margin: 8px 0 0;
-    padding-left: 18px;
-  }
-
-  /* =========================
-     FOOTER
-  ========================= */
-  .delete-footer {
-    margin-top: 22px;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.65);
-    text-align: center;
-  }
-
-  .delete-footer a {
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-  }
-</style>
-
-
+      .delete-footer a {
+        color: #09244b;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body>
     <section class="delete-wrapper">
+      <header class="delete-header">
+        <h1>Account Deletion</h1>
+      </header>
+
       <article class="delete-glass">
-        <header class="delete-header">
-          <img
-            src="assets/about/PASADA.png"
-            alt="PASADA Logo"
-            class="delete-logo"
-          />
-          <h1>Account Deletion</h1>
-        </header>
+        <div class="delete-content">
+          <p>
+            You can delete your Pasada account at any time directly from the app
+            by following the steps below.
+          </p>
 
+          <ol class="delete-steps">
+            <li>Open the app → Menu → <strong>Delete My Account</strong></li>
+            <li>Enter your password</li>
+            <li>Confirm deletion</li>
+            <li>
+              Your account information, including name, email, phone number, and
+              pickup history, will be permanently removed from our systems
+            </li>
+            <li><strong>This action cannot be undone</strong></li>
+          </ol>
 
-    <div class="delete-content">
-      <p>
-        You can delete your Pasada account at any time directly from the app
-        by following the steps below.
-      </p>
+          <div class="delete-notes">
+            <strong>Notes</strong>
+            <ul>
+              <li>
+                Guests who have not registered do not have an account to delete
+              </li>
+              <li>
+                Temporary session data (such as pickup locations) is
+                automatically cleared
+              </li>
+            </ul>
+          </div>
 
-      <ol class="delete-steps">
-        <li>Open the app → Menu → <strong>Delete My Account</strong></li>
-        <li>Enter your password</li>
-        <li>Confirm deletion</li>
-        <li>
-          Your account information, including name, email, phone number,
-          and pickup history, will be permanently removed from our systems
-        </li>
-        <li><strong>This action cannot be undone</strong></li>
-      </ol>
+          <p>
+            If you experience any issues deleting your account, contact
+            <a href="mailto:support@kapasada.com">support@kapasada.com</a>
+          </p>
+        </div>
 
-      <div class="delete-notes">
-        <strong>Notes</strong>
-        <ul>
-          <li>
-            Guests who have not registered do not have an account to delete
-          </li>
-          <li>
-            Any temporary data from sessions (such as pickup locations) is
-            automatically cleared
-          </li>
-        </ul>
-      </div>
-
-      <p>
-        If you experience any issues deleting your account, contact
-        <a href="mailto:support@kapasada.com">support@kapasada.com</a>
-      </p>
-    </div>
-
-    <footer class="delete-footer">© 2026 PASADA</footer>
-  </article>
-</section>
-
+        <footer class="delete-footer">© 2026 PASADA</footer>
+      </article>
+    </section>
   </body>
 </html>
