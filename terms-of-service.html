@@ -25,36 +25,41 @@
         font-family: "Satoshi", system-ui, -apple-system, sans-serif;
         color: #09244b;
 
-        background-image: url("https://duzlyguxxiotdnmfecju.supabase.co/storage/v1/object/public/PASADA/Assets/pasadabg.jpg");
+        background-color: #2962FF;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch;
       }
 
       /* =========================
          PAGE WRAPPER
       ========================= */
       .terms-wrapper {
-        min-height: 100svh;
+        min-height: 0svh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: clamp(24px, 4vw, 40px);
-        padding-top: 120px;
+        padding: clamp(0px, 4vw, 40px);
+        padding-top: 110px;
       }
 
       /* =========================
-         GLASS CARD (SOLID)
+         GLASS CARD
       ========================= */
       .terms-glass {
         width: 100%;
         max-width: 720px;
-        background: #ffffff;
+
+        background: rgb(255, 255, 255);
+
         border-radius: 22px;
         border: 1px solid rgba(255, 255, 255, 0.28);
+
         padding: clamp(22px, 4vw, 34px);
-        margin: 32px 16px;
+        margin: 32px 16px 0px 16px;
 
         box-shadow:
           0 16px 40px rgba(0, 0, 0, 0.25),
@@ -75,17 +80,21 @@
       }
 
       /* =========================
-         HEADER (FIXED)
+         HEADER
       ========================= */
       .terms-header {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1001;
+
         height: 120px;
         width: 100%;
+
         background: #ffffff;
+        color: #09244b;
         padding: 20px clamp(16px, 4vw, 32px);
+        border-radius: 0;
         box-shadow: 0 10px 30px rgba(8, 20, 40, 0.08);
 
         display: flex;
@@ -120,6 +129,7 @@
         margin: 0;
         font-size: 0.95rem;
         line-height: 1.6;
+        color: #09244b;
       }
 
       .terms-section {
@@ -140,6 +150,7 @@
         padding-left: 18px;
         font-size: 0.9rem;
         line-height: 1.55;
+        color: #09244b;
       }
 
       .terms-section li {
@@ -152,6 +163,7 @@
       .terms-footer {
         margin-top: 22px;
         font-size: 0.8rem;
+        color: #09244b;
         text-align: center;
       }
 
@@ -199,60 +211,50 @@
                 Pasada is a free utility to view local transport options and
                 request pickups for convenient commuting and navigation
               </li>
-              <li>
-                It is <em>not a ride-hailing service</em>
-              </li>
-              <li>
-                Confirmed pickup location is shared only if initiated by the user
-              </li>
-              <li>Users manually select pickup locations on the map</li>
+              <li><em>Not a ride-hailing service</em></li>
+              <li>Pickup location shared only if initiated by the user</li>
+              <li>Users manually select pickup locations</li>
             </ul>
           </section>
 
           <section class="terms-section">
             <h2>4. Guest Functionality</h2>
             <ul>
-              <li>
-                Guests can use maps and “Get Directions” to nearby drivers
-              </li>
-              <li>
-                Only logged-in users can initiate pickup requests
-              </li>
+              <li>Guests can view maps and drivers</li>
+              <li>Only logged-in users can request pickups</li>
             </ul>
           </section>
 
           <section class="terms-section">
             <h2>5. Prohibited Conduct</h2>
             <ul>
-              <li>Do not misuse the app or provide false information</li>
-              <li>Do not share personal information outside the app</li>
+              <li>Do not misuse the app</li>
+              <li>Do not provide false information</li>
             </ul>
           </section>
 
           <section class="terms-section">
             <h2>6. Disclaimers</h2>
             <ul>
-              <li>Driver availability is not guaranteed</li>
-              <li>
-                Pasada is not responsible for incidents between users and drivers
-              </li>
+              <li>Driver availability not guaranteed</li>
+              <li>Pasada not responsible for user-driver incidents</li>
             </ul>
           </section>
 
           <section class="terms-section">
             <h2>7. Modifications</h2>
             <ul>
-              <li>Terms may be updated; continued use indicates acceptance</li>
+              <li>Terms may be updated anytime</li>
             </ul>
           </section>
 
-          <section class="terms-section">
+          <!-- <section class="terms-section">
             <h2>8. Contact</h2>
             <p>
               Questions?
               <a href="mailto:support@kapasada.com">support@kapasada.com</a>
             </p>
-          </section>
+          </section> -->
         </div>
 
         <footer class="terms-footer">© 2026 PASADA</footer>
