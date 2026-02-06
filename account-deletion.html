@@ -25,36 +25,41 @@
         font-family: "Satoshi", system-ui, -apple-system, sans-serif;
         color: #09244b;
 
-        background-image: url("https://duzlyguxxiotdnmfecju.supabase.co/storage/v1/object/public/PASADA/Assets/pasadabg.jpg");
+        background-color: #2962FF;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch;
       }
 
       /* =========================
          PAGE WRAPPER
       ========================= */
       .delete-wrapper {
-        min-height: 100svh;
+        min-height: 0svh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: clamp(24px, 4vw, 40px);
-        padding-top: 120px;
+        padding: clamp(0px, 4vw, 40px);
+        padding-top: 110px;
       }
 
       /* =========================
-         CARD
+         GLASS CARD
       ========================= */
       .delete-glass {
         width: 100%;
-        max-width: 680px;
+        max-width: 720px;
+
         background: #ffffff;
+
         border-radius: 22px;
         border: 1px solid rgba(255, 255, 255, 0.28);
+
         padding: clamp(22px, 4vw, 34px);
-        margin: 32px 16px;
+        margin: 32px 16px 0px 16px;
 
         box-shadow:
           0 16px 40px rgba(0, 0, 0, 0.25),
@@ -75,17 +80,20 @@
       }
 
       /* =========================
-         HEADER (FIXED)
+         HEADER
       ========================= */
       .delete-header {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1001;
+
         height: 120px;
         width: 100%;
+
         background: #ffffff;
-        padding: 30px clamp(16px, 4vw, 32px);
+        color: #09244b;
+        padding: 20px clamp(16px, 4vw, 32px);
         box-shadow: 0 10px 30px rgba(8, 20, 40, 0.08);
 
         display: flex;
@@ -96,7 +104,7 @@
 
       .delete-header h1 {
         margin: 0;
-        font-size: 1.45rem;
+        font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: -0.01em;
       }
@@ -114,6 +122,7 @@
         margin: 0;
         font-size: 0.95rem;
         line-height: 1.6;
+        color: #09244b;
       }
 
       .delete-steps {
@@ -123,6 +132,7 @@
         padding-left: 18px;
         font-size: 0.9rem;
         line-height: 1.55;
+        color: #09244b;
       }
 
       .delete-notes {
@@ -133,6 +143,7 @@
         border: 1px solid rgba(9, 36, 75, 0.1);
         font-size: 0.85rem;
         line-height: 1.55;
+        color: #09244b;
       }
 
       .delete-notes ul {
@@ -146,6 +157,7 @@
       .delete-footer {
         margin-top: 22px;
         font-size: 0.8rem;
+        color: #09244b;
         text-align: center;
       }
 
@@ -176,7 +188,7 @@
             <li>Confirm deletion</li>
             <li>
               Your account information, including name, email, phone number, and
-              pickup history, will be permanently removed from our systems
+              pickup history, will be permanently removed
             </li>
             <li><strong>This action cannot be undone</strong></li>
           </ol>
@@ -184,13 +196,8 @@
           <div class="delete-notes">
             <strong>Notes</strong>
             <ul>
-              <li>
-                Guests who have not registered do not have an account to delete
-              </li>
-              <li>
-                Temporary session data (such as pickup locations) is
-                automatically cleared
-              </li>
+              <li>Guests who have not registered do not have an account to delete</li>
+              <li>Temporary session data is automatically cleared</li>
             </ul>
           </div>
 
